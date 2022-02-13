@@ -3,7 +3,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-class Conversation:
+class Conversation: hu
     def __init__(self, game, engine, xhr, version, challenge_queue):
         self.game = game
         self.engine = engine
