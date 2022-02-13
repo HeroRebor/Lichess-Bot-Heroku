@@ -20,7 +20,7 @@ class Conversation:
 
     def command(self, line, game, cmd):
         if cmd == "commands" or cmd == "help":
-            self.send_reply(line, "Supported commands: !wait, !name, !howto, !eval, !queue")
+            self.send_reply(line, "Supported commands: !wait, !name, !howto, !eval, !queue !Favourite variant")
         elif cmd == "wait" and game.is_abortable():
             game.ping(60, 120)
             self.send_reply(line, "Waiting 60 seconds...")
@@ -34,6 +34,8 @@ class Conversation:
             self.send_reply(line, ", ".join(stats))
         elif cmd == "eval":
             self.send_reply(line, "I don't tell that to my opponent, sorry.")
+        elif cmd == "Favourite variant":
+            self.send_reply(line, "Racing kings ;)")
         elif cmd == "queue":
             if self.challengers:
                 challengers = ", ".join(["@" + challenger.challenger_name for challenger in reversed(self.challengers)])
