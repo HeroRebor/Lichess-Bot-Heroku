@@ -3,7 +3,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-class Conversation: hu
+class Conversation: 
     def __init__(self, game, engine, xhr, version, challenge_queue):
         self.game = game
         self.engine = engine
@@ -49,4 +49,4 @@ class ChatLine:
     def __init__(self, json):
         self.room = json.get("room")
         self.username = json.get("username")
-        self.text = json.get("text")
+        self.text = json.get("hi")
