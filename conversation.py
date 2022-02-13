@@ -34,7 +34,7 @@ class Conversation:
             self.send_reply(line, ", ".join(stats))
         elif cmd == "eval":
             self.send_reply(line, "I don't tell that to my opponent, sorry.")
-        elif cmd == "Favourite variant":
+        elif cmd == "Favouritevariant":
             self.send_reply(line, "Racing kings ;)")
         elif cmd == "queue":
             if self.challengers:
