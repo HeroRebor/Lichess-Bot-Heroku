@@ -233,8 +233,8 @@ def play_game(li, game_id, control_queue, engine_factory, user_profile, config, 
         def __init__(self, room):
             self.room = room
     opponent = game.black.name if game.white.name == user_profile["username"] else game.white.name
-    conversation.send_reply(SendLine('player'), f'All the best {opponent} 😁 !')
-    conversation.send_reply(SendLine('player'), f'Good luck!')
+    conversation.send_reply(SendLine('player'), f'Hola amigo! This is a bot created by @TheGoldenPhoenix! All the best {opponent} 😁 !')
+    conversation.send_reply(SendLine('player'), f'Good luck have fun!')
     conversation.send_reply(SendLine('spectator'), f'Welcome to my game spectators!')
     conversation.send_reply(SendLine('spectator'), f';)')
 
