@@ -228,15 +228,16 @@ def play_game(li, game_id, control_queue, engine_factory, user_profile, config, 
     engine = engine_factory()
     engine.get_opponent_info(game)
     conversation = Conversation(game, engine, li, __version__, challenge_queue)
-``     class SendLine:
-        def init(self, room):
+    
+    class SendLine:
+        def __init__(self, room):
             self.room = room
     opponent = game.black.name if game.white.name == user_profile["username"] else game.white.name
-    conversation.send_reply(SendLine('player'), f'All the best {opponent} ! ')
-    conversation.send_reply(SendLine('player'), f' 2nd massage for opponent ')
-    conversation.send_reply(SendLine('spectator'), f'1st massage for spectators')
-    conversation.send_reply(SendLine('spectator'), f'2st massage for spectators')
-    
+    conversation.send_reply(SendLine('player'), f'All the best {opponent} !')
+    conversation.send_reply(SendLine('player'), f'Good luck!')
+    conversation.send_reply(SendLine('spectator'), f'Welcome to my game spectators!')
+    conversation.send_reply(SendLine('spectator'), f';)')
+
    
     variant=game.perf_name
     
