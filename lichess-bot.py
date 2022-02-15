@@ -232,7 +232,7 @@ def play_game(li, game_id, control_queue, engine_factory, user_profile, config, 
         def init(self, room):
             self.room = room
     opponent = game.black.name if game.white.name == user_profile["username"] else game.white.name
-    conversation.send_reply(SendLine('player'), f' 1st massage for opponent ')
+    conversation.send_reply(SendLine('player'), f'Hi there! ')
     conversation.send_reply(SendLine('player'), f' 2nd massage for opponent ')
     conversation.send_reply(SendLine('spectator'), f'1st massage for spectators')
     conversation.send_reply(SendLine('spectator'), f'2st massage for spectators')
